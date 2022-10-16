@@ -1,6 +1,6 @@
 /**********************************************************************/
 /*  PROYECTO MECANOGRAFIA        */
-/*  EQUIPO XXXX                 */
+/*  EQUIPO Suecia                 */
 
 * {
   box-sizing: border-box;
@@ -12,9 +12,9 @@
 
 :root {
   --color-fondo: hsl(69, 42%, 94%);
-  --color-primario: hsl(0, 0%, 0%);
-  --color-primario-claro: hsl(0, 0%, 50%);
-  --color-primario-muy-claro: hsl(0, 0%, 80%);
+  --color-primario: hsl(210, 40%, 22%);
+  --color-primario-claro: hsl(210, 38%, 38%);
+  --color-primario-muy-claro: hsl(51, 59%, 69%);
   --color-sobre-primario: hsl(2, 100%, 100%);
   --color-secundario: hsl(2, 50%, 102%);
   --color-sobre-secundario: hsl(2, 0%, 0%);
@@ -28,6 +28,7 @@
 .lienzo {
   height: 100vh;
   background-color: var(--color-fondo);
+  text-align: center;
 }
 
 /* ************************************ */
@@ -39,7 +40,10 @@
   color: var(--color-sobre-primario);
 
   font-size: 1.2em;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* ************************************ */
@@ -47,6 +51,9 @@
 .panel {
   width: clamp(500px, 90%, 800px);
   background-color: var(--color-primario-muy-claro);
+  display: inline-block;
+  margin-top: 10%;
+  border-radius: 15px;
 }
 
 /* ************************************ */
@@ -54,10 +61,17 @@
 .panel__controles {
   width: 100%;
   background-color: var(--color-primario-claro);
+  height: 4.5em;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .cambio {
   background-color: var(--color-secundario);
+  width: 10em;
+  margin: 2%;
+  height: 2.5em;
+  box-shadow: 5px 5px var(--color-primario);
+  border-radius: 15px;
   /* Modifica el aspecto del cursor para indicar que es un botón */
   cursor: pointer;
 }
@@ -66,12 +80,19 @@
 .panel__marcador {
   width: 100%;
   padding: 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
 }
 
 .dato-numerico {
   display: inline-block;
   background-color: var(--color-primario);
   color: var(--color-sobre-primario);
+  border-radius: 5px;
+  width: 3em;
+  height: 1.25em;
 }
 
 /* ************************************ */
@@ -79,15 +100,26 @@
   width: 70%;
   background-color: var(--color-primario);
   color: var(--color-sobre-primario);
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: column;
+  height: 6em;
+  
+  border-radius: 15px;
 }
 
 .palabra {
   width: 33%;
   background-color: var(--color-secundario);
   color: var(--color-sobre-secundario);
+  display: inline-block;
+  margin-top: 2%;
 }
 
 /* ************************************ */
 .panel__entrada {
   width: 60%;
+  display: inline-block;
+  margin: 5%;
 }
