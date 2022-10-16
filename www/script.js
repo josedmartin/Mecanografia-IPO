@@ -5,7 +5,7 @@
 // El nombre será mostrada en el elemento HTML #equipo de la página web
 // Cada equipo debe actualizar la constante con su nombre de equipo
 
-const nombreDelEquipoDeLaboratorio = "XXXXXXXXX";
+const nombreDelEquipoDeLaboratorio = "Suecia";
 document.getElementById("equipo").innerHTML = nombreDelEquipoDeLaboratorio;
 
 // -------------------------------------------------------
@@ -161,6 +161,10 @@ function ___detenerTestDeVelocidad() {
   //  OBSERVACIÓN: Al detener el tiempo, la página refleja en el marcador
   //  el resultado del test. Es decir, el número de segundos empleados y el numero
   //  de palabras correctamente mecanografiadas
+  if (identificadorTemporizador != 0) {
+    clearInterval(identificadorTemporizador);
+    identificadorTemporizador = 0;
+  }
 }
 
 function ___comprobarPalabraMecanografiada(palabraEscritaEnPanelDeEntrada) {
@@ -170,4 +174,10 @@ function ___comprobarPalabraMecanografiada(palabraEscritaEnPanelDeEntrada) {
   //    -  actualizar el número de palabras correctas
   //    -  generar aleatoriamente una nueva palabra de muestra
   //    -  vaciar el panel de entrada para permitir escribir una nueva palabra
+  if (palabraEscritaEnPanelDeEntrada === palabraDeMuestra.innerText){
+    palabrasCorrectas.innerText = parseInt(palabrasCorrectas.textContent) + 1;
+    actualizaPalabraDeMuestra();
+    entrada.value = ""
+  }
+
 }
