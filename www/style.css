@@ -19,7 +19,7 @@
   --color-secundario: hsl(2, 50%, 102%);
   --color-sobre-secundario: hsl(2, 0%, 0%);
 
-  --fuente-primaria: sans-serif;
+  --fuente-primaria: Arial, Helvetica, sans-serif;
   --fuente-secuendaria: serif;
 }
 
